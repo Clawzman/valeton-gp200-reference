@@ -623,6 +623,51 @@
   white-space: nowrap;
 }
 
+.fx-note-btn {
+  position: absolute;
+  bottom: 87%;
+  right: 34%;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(15,23,42,0.68);
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: background 0.2s ease;
+  z-index: 10;
+}
+
+.fx-note-btn:hover {
+  background: rgba(96,165,250,0.3);
+}
+
+.fx-note-bubble {
+  display: none;
+  position: absolute;
+  bottom: 75%;
+  right: 0%;
+  width: 220px;
+  background: rgba(15,23,42,0.92);
+  border: 1px solid rgba(96,165,250,0.3);
+  border-radius: 14px;
+  padding: 12px 14px;
+  color: #dbeafe;
+  font-size: clamp(11px, 0.85vw, 16px);
+  line-height: 1.6;
+  backdrop-filter: blur(10px);
+  z-index: 20;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.fx-note-bubble.open {
+  display: block;
+}
+
     .description {
       color: #cbd5e1;
       line-height: 1.5;
@@ -787,6 +832,11 @@
   Routing: Mono
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Fixed attack of 25ms and release 250ms
+</div>
+
         </div>
 
         <div class="fx-card pre-card">
@@ -814,6 +864,14 @@
 
 <div class="fx-routing-tag">
   Routing: Mono
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  ‘Attack’ also affects
+release time. 0 =
+100ms release, 100 =
+500ms release
 </div>
 
         </div>
@@ -848,6 +906,16 @@
   Routing: Mono
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Tone works on
+blended signal so is
+active even when
+Blend is set to 0,
+enabling use as just
+an EQ
+</div>
+
         </div>
 
         <div class="fx-card pre-card">
@@ -872,6 +940,13 @@
 
 <div class="fx-routing-tag">
   Routing: Mono
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Adds both even and
+odd order harmonics,
+even at unity gain
 </div>
 
         </div>
@@ -900,6 +975,13 @@
 
 <div class="fx-routing-tag">
   Routing: Mono
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Boost with 800Hz
+centre, even and odd
+order harmonics
 </div>
 
         </div>
@@ -935,6 +1017,13 @@ of boost.
 
 <div class="fx-routing-tag">
   Routing: Mono
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Boost with 1kHz
+centre, odd order
+harmonics
 </div>
 
         </div>
@@ -976,6 +1065,15 @@ guitars.
 
 <div class="fx-routing-tag">
   Routing: Mono
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Very similar to FAT BB
+in frequency
+response, but with
+odd-order harmonics
+from saturation
 </div>
 
         </div>
@@ -1039,6 +1137,13 @@ come through unaltered.
   Routing: Mono
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Volume’ here is more
+like ‘Gain’. Almost no
+distortion/saturation
+</div>
+
         </div>
 
         <div class="fx-card pre-card">
@@ -1069,6 +1174,14 @@ making clear sound more pleasant.
 
 <div class="fx-routing-tag">
   Routing: Mono
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Subtle saturation
+effect with odd-order
+and some even-order
+harmonics
 </div>
 
         </div>
@@ -1365,6 +1478,15 @@ touch-sensitive and flexible.
   Routing: Mono
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  With adjustment can
+yield a sound
+reminiscent of
+harmonic trem - but
+isn’t the same thing
+</div>
+
         </div>
 
         <div class="fx-card pre-card">
@@ -1449,6 +1571,13 @@ touch-sensitive and flexible.
   Routing: Mono
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Sounds terrible
+Wet signal has 17ms
+latency relative to dry
+</div>
+
         </div>
 
         <div class="fx-card pre-card">
@@ -1476,6 +1605,15 @@ touch-sensitive and flexible.
 
 <div class="fx-routing-tag">
   Routing: Mono
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Map expression
+pedal to ‘Range’.
+Sounds terrible
+Wet signal has 24ms
+latency relative to dry
 </div>
 
         </div>
@@ -1509,6 +1647,14 @@ pedal to get the effect.
 
 <div class="fx-routing-tag">
   Routing: Mono
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Map expression
+pedal to ‘Position.
+Wet signal has 4ms
+latency relative to dry
 </div>
 
         </div>
@@ -1545,6 +1691,13 @@ settings can bring you lots of fun.
   Routing: Special
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Passes L and R direct
+signal, applies
+harmony to L only
+</div>
+
         </div>
 
         <div class="fx-card pre-card">
@@ -1577,6 +1730,13 @@ settings can bring you lots of fun.
 
 <div class="fx-routing-tag">
   Routing: Special
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Passes L and R direct
+signal, applies
+harmony to L only
 </div>
 
         </div>
@@ -1635,6 +1795,13 @@ settings can bring you lots of fun.
 
 <div class="fx-routing-tag">
   Routing: Mono
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Adds odd-order
+harmonics even with
+Saturation at 0
 </div>
 
         </div>
@@ -1703,6 +1870,12 @@ On/Off of the effect module.
   Routing: Mono
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Percussive elements
+are preserved
+</div>
+
         </div>
 
         <div class="fx-card pre-card">
@@ -1739,6 +1912,14 @@ Off of the effect module.
 
 <div class="fx-routing-tag">
   Routing: Mono
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Tone and pitch are
+preserved, transients
+smoothed. High DSP
+usage
 </div>
 
         </div>
@@ -2128,6 +2309,13 @@ Off of the effect module.
 
 <div class="fx-routing-tag">
   Routing: Mono
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Fat and Air represent
+popular capacitor
+mods on the TS
 </div>
 
 </div>
@@ -2891,6 +3079,19 @@ a whole new level.
   Routing: Mono
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Low shelf starts @
+800Hz
+High shelf starts @
+400Hz
+“Attack” only affects
+overdrive sound, not
+dry
+EQ affects blended
+sound
+</div>
+
 </div>
 
 <div class="fx-card dst-card">
@@ -2925,6 +3126,11 @@ a good shape for timbre.
 
 <div class="fx-routing-tag">
   Routing: Mono
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Sharp rolloff above 10k
 </div>
 
 </div>
@@ -3273,6 +3479,13 @@ making clear sound more pleasant.
 <div class="fx-routing-tag">
   Routing: Mono
 </div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Bright effect lessens
+with increased Gain
+(correctly)
+</div>
         </div>
 
         <div class="fx-card amp-card">
@@ -3357,6 +3570,14 @@ making clear sound more pleasant.
   Routing: Mono
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Bright control
+switches between
+normal and bright
+inputs
+</div>
+
 </div>
 
 <div class="fx-card amp-card">
@@ -3385,6 +3606,14 @@ making clear sound more pleasant.
   Routing: Mono
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Bright cap is
+permanently on:
+effect reduces at
+higher Gain
+</div>
+
 </div>
 
 <div class="fx-card amp-card">
@@ -3411,6 +3640,14 @@ making clear sound more pleasant.
 
 <div class="fx-routing-tag">
   Routing: Mono
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  There is a strange
+glitch: Gain actually
+drops between 12
+and 13
 </div>
 
 </div>
@@ -3557,6 +3794,20 @@ making clear sound more pleasant.
   Routing: Mono
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  No Volume control as
+this is a perfectly
+clean preamp: set
+Gain to desired level.
+Idealised Fender style
+passive tone stack:
+•Bass 0 Mid 100
+Treble 0 is flat.
+•Mid scoop @
+600Hz
+</div>
+
 </div>
 
 <div class="fx-card amp-card">
@@ -3586,6 +3837,13 @@ making clear sound more pleasant.
   Routing: Mono
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Presence here is
+‘Brilliance’ on the real
+amp
+</div>
+
 </div>
 
 <div class="fx-card amp-card">
@@ -3613,6 +3871,13 @@ making clear sound more pleasant.
 
 <div class="fx-routing-tag">
   Routing: Mono
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Presence here is
+‘Brilliance’ on the real
+amp
 </div>
 
 </div>
@@ -4484,6 +4749,15 @@ making clear sound more pleasant.
   Routing: Mono
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  This model has low
+output relative to the
+other amp models,
+raise Volume to
+compensate
+</div>
+
 </div>
 
 <div class="fx-card amp-card">
@@ -4542,6 +4816,13 @@ making clear sound more pleasant.
   Routing: Mono
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Pull switch settings
+subject to
+confirmation
+</div>
+
 </div>
 
 <div class="fx-card amp-card">
@@ -4569,6 +4850,13 @@ making clear sound more pleasant.
 
 <div class="fx-routing-tag">
   Routing: Mono
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Pull switch settings
+subject to
+confirmation
 </div>
 
 </div>
@@ -4600,6 +4888,13 @@ making clear sound more pleasant.
   Routing: Mono
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Pull switch settings
+subject to
+confirmation
+</div>
+
 </div>
 
 <div class="fx-card amp-card">
@@ -4627,6 +4922,13 @@ making clear sound more pleasant.
 
 <div class="fx-routing-tag">
   Routing: Mono
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Pull switch settings
+subject to
+confirmation
 </div>
 
 </div>
@@ -4658,6 +4960,13 @@ making clear sound more pleasant.
   Routing: Mono
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Pull switch settings
+subject to
+confirmation
+</div>
+
 </div>
 
 <div class="fx-card amp-card">
@@ -4685,6 +4994,13 @@ making clear sound more pleasant.
 
 <div class="fx-routing-tag">
   Routing: Mono
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Pull switch settings
+subject to
+confirmation
 </div>
 
 </div>
@@ -4716,6 +5032,12 @@ making clear sound more pleasant.
   Routing: Mono
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  details based on
+Ampero II
+</div>
+
 </div>
 
 <div class="fx-card amp-card">
@@ -4743,6 +5065,12 @@ making clear sound more pleasant.
 
 <div class="fx-routing-tag">
   Routing: Mono
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  details based on
+Ampero II
 </div>
 
 </div>
@@ -4860,6 +5188,12 @@ making clear sound more pleasant.
   Routing: Mono
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  details based on
+Ampero II
+</div>
+
 </div>
 
 <div class="fx-card amp-card">
@@ -4887,6 +5221,12 @@ making clear sound more pleasant.
 
 <div class="fx-routing-tag">
   Routing: Mono
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  details based on
+Ampero II
 </div>
 
 </div>
@@ -4947,6 +5287,12 @@ making clear sound more pleasant.
   Routing: Mono
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  details based on
+Ampero II
+</div>
+
 </div>
 
 <div class="fx-card amp-card">
@@ -4974,6 +5320,12 @@ making clear sound more pleasant.
 
 <div class="fx-routing-tag">
   Routing: Mono
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  details based on
+Ampero II
 </div>
 
 </div>
@@ -5005,6 +5357,12 @@ making clear sound more pleasant.
   Routing: Mono
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  details based on
+Ampero II
+</div>
+
 </div>
 
 <div class="fx-card amp-card">
@@ -5032,6 +5390,12 @@ making clear sound more pleasant.
 
 <div class="fx-routing-tag">
   Routing: Mono
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  details based on
+Ampero II
 </div>
 
 </div>
@@ -5173,6 +5537,18 @@ making clear sound more pleasant.
   Routing: Mono
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Traditional Fender
+style passive tone
+stack:
+•Bass 0 Mid 100
+Treble 0 is flat.
+•Bass 50 Mid 50
+Treble 50 gives a
+-12dB cut at 400Hz
+</div>
+
 </div>
 
 <div class="fx-card amp-card amp-fix-1">
@@ -5202,6 +5578,18 @@ making clear sound more pleasant.
 
 <div class="fx-routing-tag">
   Routing: Mono
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Turning Tone up from
+0 adds a “smiley
+face” EQ, when
+Balance is 50.
+Adjusting Balance
+then dampens down
+either the bass or the
+treble boost
 </div>
 
 </div>
@@ -7720,6 +8108,12 @@ division).
   Routing: Mono -> Stereo
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Increasing “Sense”
+means less vibrato
+</div>
+
 </div>
 
 <div class="fx-card mod-card">
@@ -7848,6 +8242,13 @@ applications.
 
 <div class="fx-routing-tag">
   Routing: Mono -> Stereo
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Pan will sound like
+Tremolo in a mono
+setup
 </div>
 
 </div>
@@ -8052,6 +8453,13 @@ classic effect device was born.
   Routing: Special
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Passes L dry to both L
+& R, detunes L & R
+separately
+</div>
+
 </div>
 
 <div class="fx-card mod-card">
@@ -8236,6 +8644,14 @@ chips.
   Routing: True Stereo
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Use negative
+‘Spread’ to have
+longer delay in R
+channel
+</div>
+
 </div>
 
 <div class="fx-card dly-card">
@@ -8267,6 +8683,14 @@ chips.
 
 <div class="fx-routing-tag">
   Routing: True Stereo
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Use negative
+‘Spread’ to have
+longer delay in R
+channel
 </div>
 
 </div>
@@ -8312,6 +8736,14 @@ psychedelic musicians.
 
 <div class="fx-routing-tag">
   Routing: True Stereo
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Use negative
+‘Spread’ to have
+longer delay in R
+channel
 </div>
 
 </div>
@@ -8496,6 +8928,14 @@ psychedelic musicians.
   Routing: Special
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Direct signal swaps L
+& R channels. All
+delay is originated
+from the L input signal
+</div>
+
 </div>
 
 <div class="fx-card dly-card">
@@ -8527,6 +8967,15 @@ psychedelic musicians.
 
 <div class="fx-routing-tag">
   Routing: True Stereo
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Really only exists to
+make the adjustment
+range more
+comfortable for short
+delays
 </div>
 
 </div>
@@ -8651,6 +9100,14 @@ psychedelic musicians.
 </div>
 <div class="fx-routing-tag">
   Routing: Mono
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  ‘Mode’ chooses a
+multi-tap variation,
+like the old Roland
+Space Echo
 </div>
 
 </div>
@@ -8811,6 +9268,13 @@ psychedelic musicians.
   Routing: Special
 </div>
 
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Passes L and R direct
+signal, applies
+reverse to L+R (mono)
+</div>
+
 </div>
 
 <div class="fx-card dly-card">
@@ -8847,6 +9311,11 @@ psychedelic musicians.
 
 <div class="fx-routing-tag">
   Routing: True Stereo
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  A is L and B is R
 </div>
 
 </div>
@@ -8936,6 +9405,15 @@ freezes”.
 
 <div class="fx-routing-tag">
   Routing: Special
+</div>
+
+<div class="fx-note-btn">!</div>
+<div class="fx-note-bubble">
+  Feedback sets the
+level of the first
+repeat: Feedback = 0
+results in no delay
+signal
 </div>
 
 </div>
@@ -9405,6 +9883,19 @@ sections.forEach(section => {
       document.getElementById(activeTab.dataset.tab).classList.add('active');
     }
   }
+});
+
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.fx-note-btn');
+  if (btn) {
+    const bubble = btn.nextElementSibling;
+    const isOpen = bubble.classList.contains('open');
+    document.querySelectorAll('.fx-note-bubble.open').forEach(b => b.classList.remove('open'));
+    if (!isOpen) bubble.classList.add('open');
+    e.stopPropagation();
+    return;
+  }
+  document.querySelectorAll('.fx-note-bubble.open').forEach(b => b.classList.remove('open'));
 });
 
   </script>
